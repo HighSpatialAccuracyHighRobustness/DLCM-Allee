@@ -1,0 +1,27 @@
+for i=1:211
+    u = UsaveMeanMean{i};
+    C=u;
+    S=50*ones(size(u,1),1);
+    scatter3(X(C~=0),Y(C~=0),Z(C~=0),S(C~=0),C(C~=0),'filled')
+    %scatter3(X,Y,Z,S,C,'filled')
+%          aXis([-2e-3, 2e-3, -2e-3, 2e-3]);
+     axis([min(X), max(X), min(Y), max(Y), min(Z), max(Z)]);
+    colorbar;
+    cool;
+    view([45,45,45]);
+    %set(gcf,'menubar','none')
+    figure_FontSize=8;
+    set(get(gca,'XLabel'),'FontSize',figure_FontSize,'FontName','Arial');
+    set(get(gca,'YLabel'),'FontSize',figure_FontSize,'FontName','Arial');
+    set(get(gca,'YLabel'),'FontSize',figure_FontSize,'FontName','Arial');
+    set(findobj('FontSize',10),'FontSize',figure_FontSize);
+
+
+    set(findobj(get(gca,'Children'),'LineWidth',1.0),'LineWidth',1.0);
+
+    if i==1
+        pause
+    end
+    pause
+    i
+    end
